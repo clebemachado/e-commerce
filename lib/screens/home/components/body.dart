@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 
 import 'package:story_app/core/models/product_list.dart';
 import 'package:story_app/screens/home/components/card_workspace.dart';
+import 'package:story_app/screens/workspaces/workspaces.dart';
 import 'package:story_app/size_config.dart';
 
 import '../../components/text_row_see_more.dart';
@@ -28,7 +28,11 @@ class Body extends StatelessWidget {
             CardPopularNow(product: products.popPost),
             SizedBox(height: getWidth(17)),
             TextRowSeeMore(
-                text: "Workspace", fontSize: getWidth(21), press: () {}),
+              text: "Workspace",
+              fontSize: getWidth(21),
+              press: () =>
+                  Navigator.of(context).pushNamed(WorkSpaces.routeName),
+            ),
             SizedBox(height: getWidth(12)),
             CardWorkspace(categorias: products.categoria),
             SizedBox(height: getWidth(32)),
@@ -42,5 +46,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
-

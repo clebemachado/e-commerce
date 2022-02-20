@@ -5,6 +5,7 @@
 
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
+import 'package:story_app/size_config.dart';
 
 import 'constants.dart';
 
@@ -20,6 +21,11 @@ ThemeData themeData(BuildContext context) {
 AppBarTheme appBarTheme2 = const AppBarTheme(
   elevation: 0,
   color: kBackgroundColor,
+  titleTextStyle: TextStyle(
+    color: Color(0xff040B14),
+    fontWeight: FontWeight.w500,
+  ),
+  centerTitle: true,
   systemOverlayStyle: SystemUiOverlayStyle(
     statusBarColor: kBackgroundColor,
     statusBarIconBrightness: Brightness.light,
